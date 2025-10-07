@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Tetris",
+    "iframe": "<iframe src='https://example.com/tetris' width='600' height='400' frameborder='0' allowfullscreen></iframe>"
+  },
+  {
+    "name": "Snake",
+    "iframe": "<iframe src='https://example.com/snake' width='600' height='400' frameborder='0' allowfullscreen></iframe>"
+  },
+  {
+    "name": "2048",
+    "iframe": "<iframe src='https://example.com/2048' width='600' height='400' frameborder='0' allowfullscreen></iframe>"
+  }
+]
