@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+<h1>Homepage</h1>
+
+
+<button id="loadGames">Load Games</button>
+<div id="gamesContainer"></div>
+
+<script>
+document.getElementById("loadGames").addEventListener("click", function() {
+  fetch("data/games.json") // adjust path if needed
+    .then(response => response.json())
+    .then(data => {
+      const container = document.getElementById("gamesContainer");
+      container.innerHTML = ""; // Clear previous content
+      data.forEach(game => {
+        const title = document.createElement("h3");
+        title.textContent = game.name;
+
+        const wrapper = document.createElement("div");
+        wrapper.innerHTML = game.iframe;
+
+        container.appendChild(title);
+        container.appendChild(wrapper);
+      });
+    })
+    .catch(error => console.error("Error loading games:", error));
+});
+</script>
+
+
+</body>
+</html>
